@@ -1,16 +1,10 @@
-const body = document.querySelector("body");
+const body = document.body;
 
-body.addEventListener("mousemove", (event)=>{
-    const xPos = event.offsetX;
-    const yPos = event.offsetY;
+const createElement = (elmname)=>{
+    const htmlTag = document.createElement(elmname);
+    return htmlTag;
+}
 
-    const span = document.createElement("span");
-    span.style.left = xPos + "px";
-    span.style.top = yPos + "px";
-
-    body.append(span);
-
-    setTimeout(()=>{
-        span.remove();
-    },3000);
-})
+console.log(htmlTag);
+const tag = createElement();
+body.append(tag);
